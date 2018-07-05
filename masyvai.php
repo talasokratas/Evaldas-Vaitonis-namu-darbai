@@ -138,29 +138,14 @@ $a = [
      [2 => 3, 5 => 8], 
      [1, 1, 5 => 1]
      ];
-   
 
-// key yra stulpelio numeris, a[$i] - eilutes numeris
-/*
-$max = 0;        
-    for ($i = 0; $i < count($a); $i++) {
-        foreach($a[$i] as $key => $eilute) { 
-            if ($key === $i) {           
-               $suma += ($a[$i][$key]); 
-            }
-        }
-    var_dump($suma);        
-    if ($suma > $max) {
-        $max = $suma;
-    }      
-  
-    $suma = 0;    
-};
-*/
-
-/// UZDUOTI PRALEIDZIU. MANAU, KAD NEISPRENDZIU NES:
-// NEZINAU KAIP IRASYTI NULIUS I TUSCIAS MASYVO VIETAS,
-// NEZINAU KAIP ZAISTI SU DAUGIAMACIO MASYVO ELEMENTAIS FOREACH CIKLE,
-// NEZINAU KAIP IR KA RASYTI I PAGALBINI MASYVA JEI JI NAUDOCIAU SPRENDIMUI
-// JEI ZINOTE KA GALECIAU PASKAITYTI, KAD KAI KURIAS ZINIU SPRAGAS UZPILDYCIAU, BUTU IDOMU GAUTI NUORODAS 
-
+ $max = 0;       
+ foreach ($a as $eilute) {  
+     foreach ($eilute as $key => $value) {
+         if (($sumuMasyvas[$key] += $value) > $max){
+             $max = $sumuMasyvas[$key];
+         }        
+     }
+ }
+ var_dump ($sumuMasyvas);
+ var_dump($max);
