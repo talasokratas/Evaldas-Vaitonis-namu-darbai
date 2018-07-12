@@ -1,0 +1,21 @@
+ td, tr, th {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+.tablewidth {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.forma {
+    width: 700px;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+p {
+    width: 700px;
+    margin: 0 auto;
+}
